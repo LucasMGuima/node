@@ -16,5 +16,8 @@
     "url": "https://github.com/LucasMGuima/node/issues"
   },
   "homepage": "https://github.com/LucasMGuima/node#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^9.19.0"
+  }
 }
