@@ -1,0 +1,20 @@
+{
+  "name": "ex_01",
+  "version": "1.0.0",
+  "description": "Desenvolver um servidor HTTP usando apenas os módulos nativos do Node.js (como http, url e fs).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasMGuima/node.git"
+  },
+  "author": "LucasMGuima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasMGuima/node/issues"
+  },
+  "homepage": "https://github.com/LucasMGuima/node#readme",
+  "type": "module"
+}
