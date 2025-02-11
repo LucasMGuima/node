@@ -9,7 +9,6 @@ function successPrint(str, res){
 
 export const server = createServer((req, res) => {
     let url = parse(req.url, true);
-    console.log(url);
 
     switch (url.pathname){
       case '/teste':
