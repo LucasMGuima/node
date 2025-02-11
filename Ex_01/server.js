@@ -3,7 +3,7 @@ import { parse } from 'url';
 import { readFileSync, readFile } from 'fs';
 
 function successPrint(str, res){
-  res.writeHead(200, { 'Content-type':'text/plain' });
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
   res.end(str);
 }
 
