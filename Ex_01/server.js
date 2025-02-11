@@ -27,5 +27,8 @@ export const server = createServer((req, res) => {
           successPrint(data, res);
         });
         break;
+      default:
+        successPrint("Caminho não econtrado.", res);
+        break;
     }
   });
