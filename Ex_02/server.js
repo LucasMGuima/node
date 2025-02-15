@@ -11,6 +11,7 @@ export const server = createServer((req, res)=>{
     switch(url.pathname){
         default:
             res.end('Caminho não encontrado');
+            console.log(url);
             break;    
         case '/addUser':
             fetch('https://randomuser.me/api/').then((dado)=>{
@@ -30,7 +31,12 @@ export const server = createServer((req, res)=>{
             });
             break;
         case '/users':
-            res.end(JSON.stringify(usuarios));
+            let resp = "";
+            usuarios.forEach((usuario) => {
+                console.log(usuario);
+                resp = resp.concat(`id = ${usuario.id}\nnome = ${usuario.nome}\nemail = ${usuario.email}\n================================\n`);
+            });
+            res.end(resp);
             break;
     }
 })
