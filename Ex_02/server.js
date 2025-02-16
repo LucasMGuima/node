@@ -33,10 +33,15 @@ export const server = createServer((req, res)=>{
         case '/users':
             let resp = "";
             usuarios.forEach((usuario) => {
-                console.log(usuario);
                 resp = resp.concat(`id = ${usuario.id}\nnome = ${usuario.nome}\nemail = ${usuario.email}\n================================\n`);
             });
             res.end(resp);
+            break;
+        case '/user':
+            let id = url.query.id;
+            id = parseInt(id, 10);
+            let usuario = usuarios[id - 1];
+            res.end(`id = ${usuario.id}\nnome = ${usuario.nome}\nemail = ${usuario.email}\nusername = ${usuario.username}\nsenha = ${usuario.password}\n`);
             break;
     }
 })
