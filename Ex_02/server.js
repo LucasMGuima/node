@@ -14,8 +14,8 @@ export const server = createServer((req, res)=>{
             console.log(url);
             break;    
         case '/addUser':
-            fetch('https://randomuser.me/api/').then((dado)=>{
-                return dado.json();
+            fetch('https://randomuser.me/api/').then( response =>{
+                return response.json();
             }).then((usuario) => {
                 let u = usuario.results[0];
                 // Pega os dados importantes
@@ -28,6 +28,8 @@ export const server = createServer((req, res)=>{
                 }
                 usuarios.push(novo_usario);
                 res.end("Usuário armazenado no \"banco\".");
+            }).catch(error=>{
+                throw new Error('Erro ao buscar os dados');
             });
             break;
         case '/users':
